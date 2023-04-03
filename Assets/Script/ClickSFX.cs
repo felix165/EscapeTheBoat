@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ClickSFX : MonoBehaviour
 {
+    public UnityEvent OnMouseClicked;
     public AudioSource SFX;
     bool clicked = false;
     public float delay = 1;
@@ -11,6 +13,8 @@ public class ClickSFX : MonoBehaviour
     void Start()
     {
         clicked = false;
+
+        OnMouseClicked?.Invoke();
     }
     private void OnMouseDown()
     {
@@ -34,4 +38,6 @@ public class ClickSFX : MonoBehaviour
             }
         }
     }
+
+   
 }

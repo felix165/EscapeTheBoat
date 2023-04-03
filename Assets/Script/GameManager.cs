@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static AudioSource BGM;
+    public UnityEvent OnLevelCompleted; 
+    public static GameManager instance;
     public static float timeLimit=600f;
     public static float curTimeLimit=timeLimit;
 
@@ -124,10 +126,28 @@ public class GameManager : MonoBehaviour
             isLevelCompelete = true;
             tempScore += completeScore;
             tempScore += (moveLeft * moveBonusScore);
+            OnLevelCompleted?.Invoke();
         }
     }
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
 
-    
+    public void click()
+    {
+        print("click!!");
+    }
+
 
 
 }
