@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public UnityEvent OnLevelCompleted; 
-    public static GameManager instance;
+    public static GameManager Instance;
     public static float timeLimit=600f;
     public static float curTimeLimit=timeLimit;
 
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    //NewGame
     public void NewGame()
     {
         curTimeLimit= timeLimit;
@@ -81,7 +81,8 @@ public class GameManager : MonoBehaviour
 
         NextLevel();
     }
-
+    
+    //NextLevel
     public void NextLevel()
     {
         int sceneIndex = 0;
@@ -91,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+            SoundManager.Instance.PlaySFX("NextLevel");
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 sceneIndex = tutorialScene;
@@ -119,6 +120,7 @@ public class GameManager : MonoBehaviour
         return sceneIndex;
     }
 
+
     public void levelComplete(int moveLeft=0)
     {
         if (!isGameOver)
@@ -126,27 +128,30 @@ public class GameManager : MonoBehaviour
             isLevelCompelete = true;
             tempScore += completeScore;
             tempScore += (moveLeft * moveBonusScore);
-            OnLevelCompleted?.Invoke();
+            //OnLevelCompleted?.Invoke();
         }
     }
     void Awake()
     {
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
         else
         {
-            instance = this;
+            Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
     }
 
     public void click()
     {
+        SoundManager.Instance.PlaySFX("Click");
         print("click!!");
     }
+
+
 
 
 
