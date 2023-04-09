@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ryan.unity
     guid: 0fffc2a82512dc74b8f4ddc5c651a786
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 6d0a7e5a69b31ab4485a30ad36673ac5
   m_configObjects: {}

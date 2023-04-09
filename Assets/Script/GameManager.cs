@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public UnityEvent OnLevelCompleted; 
     public static GameManager Instance;
-    public static float timeLimit=600f;
-    public static float curTimeLimit=timeLimit;
+    public float timeLimit=600f;
+    public static float timeLeft;
 
     public static int score = 0;
     public int completeScore = 200;
@@ -33,13 +31,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        NewGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (curTimeLimit <= 0)
+        if (timeLeft <= 0)
         {
             //GameOver
             isGameOver = true;
@@ -48,6 +46,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            //Score Animation
             if (isLevelCompelete)
             {
                 if (tempScore != score)
@@ -66,20 +65,24 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                curTimeLimit -= Time.deltaTime;
+                timeLeft -= Time.deltaTime;
             }
         }
     }
     //NewGame
     public void NewGame()
     {
-        curTimeLimit= timeLimit;
+        timeLeft = timeLimit;
         score = 0;
         tempScore = score;
         loadedScene.Clear();
         isGameOver = false;
 
-        NextLevel();
+        if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == -1)
+        {
+            NextLevel();
+        }
+        
     }
     
     //NextLevel
@@ -93,19 +96,16 @@ public class GameManager : MonoBehaviour
         else
         {
             SoundManager.Instance.PlaySFX("NextLevel");
-            if (SceneManager.GetActiveScene().buildIndex == 0)
-            {
-                sceneIndex = tutorialScene;
-            }
-            else
-            {
-                sceneIndex = RandomLevel(minLevelScene, maxLevelScene);
-                loadedScene.Add(sceneIndex);
-            }
+            sceneIndex = RandomLevel(minLevelScene, maxLevelScene);
+            loadedScene.Add(sceneIndex);
             isLevelCompelete = false;
         }
         SceneManager.LoadScene(sceneIndex);
+    }
 
+    public void LoadTutorialScene()
+    {
+        SceneManager.LoadScene(tutorialScene);
     }
 
     private int RandomLevel(int min, int max)
@@ -128,8 +128,13 @@ public class GameManager : MonoBehaviour
             isLevelCompelete = true;
             tempScore += completeScore;
             tempScore += (moveLeft * moveBonusScore);
-            //OnLevelCompleted?.Invoke();
         }
+    }
+    public void OutOfMove()
+    {
+        isGameOver = true; //if outOfMove not mean gameover then comment this line.
+        NextLevel();
+
     }
     void Awake()
     {
@@ -145,11 +150,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void click()
-    {
-        SoundManager.Instance.PlaySFX("Click");
-        print("click!!");
-    }
 
 
 

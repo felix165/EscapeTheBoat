@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8155601693496100086}
   - component: {fileID: 8155601693496100081}
-  - component: {fileID: 176749469}
+  - component: {fileID: 4419296309649348662}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,36 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20740433edfb3ad488aa9a5975377c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnLevelCompleted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  timeLimit: 600
   completeScore: 200
   moveBonusScore: 10
---- !u!114 &176749469
+--- !u!114 &4419296309649348662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,13 +60,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7706b0fdaacc3cf4abcd5f0f9521aaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 4ed83d71385577d4b82130acdc76ef62, type: 2}
+  Event: {fileID: 11400000, guid: 58f974b22bf656e4eaa77d2a24194011, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8155601693496100081}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: click
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
