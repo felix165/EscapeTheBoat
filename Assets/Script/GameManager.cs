@@ -13,10 +13,11 @@ public class GameManager : MonoBehaviour
     public static int score = 0;
     public int completeScore = 200;
     public int moveBonusScore = 10;
+    public int failScore = 1;
 
     private int tempScore = 0;
     private float tempDelay = 0;
-    private bool isLevelCompelete = false;
+    private bool isCountScore = false;
 
     private ArrayList loadedScene = new ArrayList();
     private int minLevelScene = 2;
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
         else
         {
             //Score Animation
-            if (isLevelCompelete)
+            if (isCountScore)
             {
                 if (tempScore != score)
                 {
@@ -98,7 +99,7 @@ public class GameManager : MonoBehaviour
             SoundManager.Instance.PlaySFX("NextLevel");
             sceneIndex = RandomLevel(minLevelScene, maxLevelScene);
             loadedScene.Add(sceneIndex);
-            isLevelCompelete = false;
+            isCountScore = false;
         }
         SceneManager.LoadScene(sceneIndex);
     }
@@ -125,15 +126,20 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameOver)
         {
-            isLevelCompelete = true;
+            isCountScore = true;
             tempScore += completeScore;
             tempScore += (moveLeft * moveBonusScore);
         }
     }
     public void OutOfMove()
     {
-        isGameOver = true; //if outOfMove not mean gameover then comment this line.
-        NextLevel();
+        if (!isGameOver)
+        {
+            isCountScore = true;
+            tempScore += completeScore;
+            tempScore += failScore;
+        }
+        
 
     }
     void Awake()
