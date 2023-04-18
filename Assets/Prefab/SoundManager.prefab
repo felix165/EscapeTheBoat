@@ -138,6 +138,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4606535698697086685}
   - component: {fileID: 4606535698697086686}
+  - component: {fileID: 6143754586543076091}
+  - component: {fileID: 2175692299480660523}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -184,6 +186,62 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e1a787777e239fb49a43240dc35b9f63, type: 3}
   musicSource: {fileID: 4606535698428261764}
   sfxSource: {fileID: 4606535699483481090}
+--- !u!114 &6143754586543076091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606535698697086687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7706b0fdaacc3cf4abcd5f0f9521aaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4ed83d71385577d4b82130acdc76ef62, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4606535698697086686}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2175692299480660523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606535698697086687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7706b0fdaacc3cf4abcd5f0f9521aaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 58f974b22bf656e4eaa77d2a24194011, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4606535698697086686}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnLevelComplete
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4606535699483481091
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public class SoundManager : MonoBehaviour
 
         if (s != null)
         {
+            Debug.Log(s);
             sfxSource.clip = s.clip;
             sfxSource.Play();
             

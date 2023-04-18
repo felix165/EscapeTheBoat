@@ -26,49 +26,57 @@ public class GameManager : MonoBehaviour
     private int gameOverScene = 11;
 
     public static bool isGameOver = false;
+    bool isGameStart = false;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        NewGame();
+
+        //NewGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeLeft <= 0)
+        if (isGameStart)
         {
-            //GameOver
-            isGameOver = true;
-            score = tempScore;
-            NextLevel();
-        }
-        else
-        {
-            //Score Animation
-            if (isCountScore)
+            if (timeLeft <= 0)
             {
-                if (tempScore != score)
+                //GameOver
+                isGameOver = true;
+                score = tempScore;
+                Debug.Log("xxxxxxxx");
+                NextLevel();
+
+            }
+            else
+            {
+                //Score Animation
+                if (isCountScore)
                 {
-                    tempDelay += Time.deltaTime;
-                    if (tempDelay >= 0.01f)
+                    if (tempScore != score)
                     {
-                        tempDelay = 0f;
-                        score += 1;
+                        tempDelay += Time.deltaTime;
+                        if (tempDelay >= 0.01f)
+                        {
+                            tempDelay = 0f;
+                            score += 1;
+                        }
+                    }
+                    else
+                    {
+                        NextLevel();
                     }
                 }
                 else
                 {
-                    NextLevel();
+                    timeLeft -= Time.deltaTime;
                 }
             }
-            else
-            {
-                timeLeft -= Time.deltaTime;
-            }
         }
+        
     }
     //NewGame
     public void NewGame()
@@ -83,7 +91,7 @@ public class GameManager : MonoBehaviour
         {
             NextLevel();
         }
-        
+        isGameStart= true;        
     }
     
     //NextLevel
@@ -139,8 +147,10 @@ public class GameManager : MonoBehaviour
             tempScore += completeScore;
             tempScore += failScore;
         }
-        
-
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
     void Awake()
     {
