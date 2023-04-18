@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
 
     private ArrayList loadedScene = new ArrayList();
     private int minLevelScene = 2;
-    private int maxLevelScene = 10;
+    private int maxLevelScene = 6;
+    private int mainMenuScene = 0;
     private int tutorialScene = 1;
     private int gameOverScene = 11;
 
@@ -47,7 +48,6 @@ public class GameManager : MonoBehaviour
                 //GameOver
                 isGameOver = true;
                 score = tempScore;
-                Debug.Log("xxxxxxxx");
                 NextLevel();
 
             }
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         loadedScene.Clear();
         isGameOver = false;
 
-        if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == -1)
+        if(SceneManager.GetActiveScene().buildIndex == tutorialScene || SceneManager.GetActiveScene().buildIndex == gameOverScene)
         {
             NextLevel();
         }

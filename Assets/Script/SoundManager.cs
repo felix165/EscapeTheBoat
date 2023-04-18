@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     public Sound[] musicSound, sfxSound;
     public AudioSource musicSource, sfxSource;
 
-    public static float volume = 100;
+    public static float volume = 1;
     
     
     public void PlayMusic (string name)
@@ -73,9 +73,10 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        musicSource.volume= volume;
-        sfxSource.volume= volume;
+        musicSource.volume = volume;
+        sfxSource.volume = volume;
     }
+
 
 
 

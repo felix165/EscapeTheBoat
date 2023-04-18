@@ -37,7 +37,7 @@ public class TutorialSceneManager : MonoBehaviour
     public void Prev()
     {
         int curIndex = Array.IndexOf(tutorialImage, BG.sprite);
-        if (curIndex <= 0)
+        if (curIndex < 0)
         {
             Debug.Log("Tutorial - IndexNotFound");
         }
