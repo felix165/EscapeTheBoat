@@ -23,19 +23,29 @@ public class CharAdjustment : MonoBehaviour
     public Move moveType;
     public Char charType;
     public Grid grid;
+    private Rigidbody2D rb;
 
     private Vector3 startPos;
+
+    private bool isMouseDown = false;
 
  
 
     // Start is called before the first frame update
     void Start()
     {
-        var rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.freezeRotation= true;
         rb.simulated = true;
-
+        if(moveType== Move.Horizontal)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+        }
         imageAdjustment();
         colliderAdjustment();
     }
@@ -72,6 +82,7 @@ public class CharAdjustment : MonoBehaviour
         mousePos.x -= 960;
         mousePos.y -= 480;
         startPos = mousePos/108 - this.gameObject.transform.position;
+        isMouseDown= true;
     }
 
     private void OnMouseDrag()
@@ -134,10 +145,15 @@ public class CharAdjustment : MonoBehaviour
     private void OnMouseUp()
     {
         PosAdjustment();
+        isMouseDown= false;
     }
     // Update is called once per frame
     void Update()
     {
+        if(!isMouseDown)
+        {
+            PosAdjustment();
+        }
         
     }
 
