@@ -80,7 +80,23 @@ MonoBehaviour:
   moveType: 0
   charType: 1
   grid: {fileID: 0}
-  speed: 10
+  speed: 7
+  moveLimitObj: {fileID: 0}
+  onMoveFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2b16e3d3eafbcc84495f3bd9edae7e2a, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &2078538398929511428
 Rigidbody2D:
   serializedVersion: 4
@@ -197,7 +213,7 @@ GameObject:
   - component: {fileID: 2719768350359189169}
   - component: {fileID: 6942825939886203535}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

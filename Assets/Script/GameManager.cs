@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public float timeLimit=600f;
-    public static float timeLeft;
+    public static float timeLeft = 600f;
 
     public static int score = 0;
     public int completeScore = 200;
@@ -22,12 +22,13 @@ public class GameManager : MonoBehaviour
     private ArrayList loadedScene = new ArrayList();
     private int minLevelScene = 2;
     private int maxLevelScene = 6;
-    private int mainMenuScene = 0;
+    //private int mainMenuScene = 0;
     private int tutorialScene = 1;
     private int gameOverScene = 11;
 
     public static bool isGameOver = false;
     bool isGameStart = false;
+    public static bool isGamePause = false;
 
 
 
@@ -76,7 +77,20 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SettingsWindow.Instance.setActive(!SettingsWindow.Instance.getActiveSelf());
+            if (!SettingsWindow.Instance.getActiveSelf())
+            {
+                resumeGame();
+            }
+            else
+            {
+                pauseGame();
+            }
+        }
+
     }
     //NewGame
     public void NewGame()
@@ -164,6 +178,20 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0f;
+        isGamePause= true;
+        Debug.Log("pause");
+        
+    }
+    public void resumeGame()
+    {
+        Time.timeScale = 1.0f;
+        isGamePause= false;
+        Debug.Log("Resume");
     }
 
 

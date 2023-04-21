@@ -30,7 +30,7 @@ public class ExitDoor : MonoBehaviour
         MovementLimit.text = moveLimit.ToString("0");
     }
 
-    void MoveDecrease()
+    public void MoveDecrease()
     {
         if (moveLimit > 0)
         {
