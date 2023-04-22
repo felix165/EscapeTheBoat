@@ -1634,9 +1634,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu2, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 8155601693496100081, guid: 5f5ea232e540be24db6a5436d6ca6797, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: updateSettingWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -80,15 +80,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SettingsWindow.Instance.setActive(!SettingsWindow.Instance.getActiveSelf());
-            if (!SettingsWindow.Instance.getActiveSelf())
-            {
-                resumeGame();
-            }
-            else
-            {
-                pauseGame();
-            }
+            updateSettingWindow();
         }
 
     }
@@ -192,6 +184,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;
         isGamePause= false;
         Debug.Log("Resume");
+    }
+
+    public void updateSettingWindow()
+    {
+        SettingsWindow.Instance.setActive(!SettingsWindow.Instance.getActiveSelf());
+        if (!SettingsWindow.Instance.getActiveSelf())
+        {
+            resumeGame();
+        }
+        else
+        {
+            pauseGame();
+        }
     }
 
 
