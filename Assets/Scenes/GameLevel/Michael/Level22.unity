@@ -134,10 +134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallVertikal (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7391302672271206313, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -145,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1792197166}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -370,7 +374,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: sprite
       value: 
@@ -1336,10 +1340,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallVertikal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7391302672271206313, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -1485,10 +1493,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallVertikal (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7391302672271206313, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -1928,7 +1940,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -2136,6 +2148,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1379572600}
+    - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8b7c6607b0ad4454f9696e888066b750, type: 3}
@@ -2146,6 +2162,10 @@ PrefabInstance:
     - target: {fileID: 7603600486613390923, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: m_Name
       value: LargeHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603600486613390923, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
@@ -2942,7 +2962,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -3353,10 +3373,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallVertikal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7391302672271206313, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -3742,10 +3766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallVertikal
       objectReference: {fileID: 0}
+    - target: {fileID: 7391302672271206313, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
