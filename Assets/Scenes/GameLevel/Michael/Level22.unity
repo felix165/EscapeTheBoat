@@ -2765,7 +2765,7 @@ PrefabInstance:
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1379572600}
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: sprite
       value: 
@@ -2773,7 +2773,7 @@ PrefabInstance:
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1792197166}
     - target: {fileID: 638134566806848306, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3548,8 +3548,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  moveLimit: 19
-  MovementLimit: {fileID: 0}
+  moveLimit: 18
+  MovementLimit: {fileID: 673526401}
 --- !u!61 &1792197170
 BoxCollider2D:
   m_ObjectHideFlags: 0
