@@ -13,18 +13,19 @@ public class GameManager : MonoBehaviour
     public static int score = 0;
     public int completeScore = 200;
     public int moveBonusScore = 10;
-    public int failScore = 1;
+    public int failScore = 50;
+    private int incAmount = 20;
 
     private int tempScore = 0;
     private float tempDelay = 0;
     private bool isCountScore = false;
 
     private ArrayList loadedScene = new ArrayList();
-    private int minLevelScene = 2;
-    private int maxLevelScene = 6;
+    private int minLevelScene = 3;
+    private int maxLevelScene = 27;
     //private int mainMenuScene = 0;
     private int tutorialScene = 1;
-    private int gameOverScene = 11;
+    private int gameOverScene = 2;
 
     public static bool isGameOver = false;
     bool isGameStart = false;
@@ -47,9 +48,7 @@ public class GameManager : MonoBehaviour
             if (timeLeft <= 0)
             {
                 //GameOver
-                isGameOver = true;
-                score = tempScore;
-                NextLevel();
+                GameOver();
 
             }
             else
@@ -60,10 +59,19 @@ public class GameManager : MonoBehaviour
                     if (tempScore != score)
                     {
                         tempDelay += Time.deltaTime;
-                        if (tempDelay >= 0.01f)
+                        if (tempDelay >= 0.35f)
                         {
                             tempDelay = 0f;
-                            score += 1;
+                            if (score + incAmount > tempScore)
+                            {
+                                score = tempScore;
+                            }
+                            else
+                            {
+                                score += incAmount;
+                            }
+                            SoundManager.Instance.PlaySFX("Score");
+                            
                         }
                     }
                     else
@@ -92,12 +100,12 @@ public class GameManager : MonoBehaviour
         tempScore = score;
         loadedScene.Clear();
         isGameOver = false;
-
-        if(SceneManager.GetActiveScene().buildIndex == tutorialScene || SceneManager.GetActiveScene().buildIndex == gameOverScene)
+        isGameStart = true;
+        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "GameOver")
         {
             NextLevel();
         }
-        isGameStart= true;        
+             
     }
     
     //NextLevel
@@ -107,13 +115,21 @@ public class GameManager : MonoBehaviour
         if (isGameOver)
         {
             sceneIndex = gameOverScene;
+            SoundManager.Instance.PlaySFX("GameOver");
         }
         else
         {
-            SoundManager.Instance.PlaySFX("NextLevel");
+            //SoundManager.Instance.PlaySFX("NextLevel");
             sceneIndex = RandomLevel(minLevelScene, maxLevelScene);
-            loadedScene.Add(sceneIndex);
-            isCountScore = false;
+            if(sceneIndex == -1)
+            {
+                GameOver();
+            }
+            else
+            {
+                loadedScene.Add(sceneIndex);
+                isCountScore = false;
+            }          
         }
         SceneManager.LoadScene(sceneIndex);
     }
@@ -126,10 +142,14 @@ public class GameManager : MonoBehaviour
     private int RandomLevel(int min, int max)
     {
         int sceneIndex = 0;
+        if(loadedScene.Count == (max - min) + 1)
+        {
+            return -1;
+        }
         bool flag = true;
         while(flag)
         {
-            sceneIndex = (int)Random.Range(min, max);
+            sceneIndex = (int)Random.Range(min, max+1);
             flag=loadedScene.Contains(sceneIndex);
         }
         return sceneIndex;
@@ -150,8 +170,9 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             isCountScore = true;
-            tempScore += completeScore;
             tempScore += failScore;
+            SoundManager.Instance.PlaySFX("OutOfMove");
+            Debug.Log("OutOfMove");
         }
     }
     public void QuitGame()
@@ -197,6 +218,12 @@ public class GameManager : MonoBehaviour
         {
             pauseGame();
         }
+    }
+    public void GameOver()
+    {
+        isGameOver = true;
+        score = tempScore;
+        NextLevel();
     }
 
 

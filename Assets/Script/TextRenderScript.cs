@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TextRenderScript : MonoBehaviour
 {
@@ -14,7 +13,8 @@ public class TextRenderScript : MonoBehaviour
     }
 
     public Opsi option;
-    public Text textObj;
+    //public Text textObj;
+    public TextMeshProUGUI textObj;
 
 
     // Start is called before the first frame update

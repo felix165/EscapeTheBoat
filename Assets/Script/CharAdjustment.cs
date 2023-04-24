@@ -1,12 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
-using Unity.Burst.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 using Color = UnityEngine.Color;
 
 public class CharAdjustment : MonoBehaviour
@@ -91,11 +87,11 @@ public class CharAdjustment : MonoBehaviour
         var collider = GetComponent<BoxCollider2D>();
         if (charType == Char.Small)
         {
-            collider.size = new Vector2(1.49f, 2.99f);
+            collider.size = new Vector2(1.45f, 2.95f);
         }
         else
         {
-            collider.size = new Vector2(1.49f, 4.49f);
+            collider.size = new Vector2(1.45f, 4.45f);
         }
         if (moveType == Move.Horizontal)
         {
@@ -106,6 +102,7 @@ public class CharAdjustment : MonoBehaviour
     private void OnMouseDown()
     {
         if (GameManager.isGamePause) { return; }
+        if (moveLimitObj.GetComponent<ExitDoor>().IsOutOfMove()) { return; }
         startPos = this.transform.position;
         if (moveType == Move.Horizontal)
         {
@@ -205,6 +202,7 @@ public class CharAdjustment : MonoBehaviour
     private void OnMouseUp()
     {
         if (GameManager.isGamePause) { return; }
+        if (moveLimitObj.GetComponent<ExitDoor>().IsOutOfMove()) { onMoveFail?.Invoke(); return; }
         this.gameObject.transform.position = PosAdjustment();
         shadow.transform.position= PosAdjustment();
         

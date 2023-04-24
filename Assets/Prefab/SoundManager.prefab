@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2355163948559859581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984801631189431675}
+  - component: {fileID: 8140871334751173293}
+  m_Layer: 0
+  m_Name: BGSound Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984801631189431675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355163948559859581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4606535698697086685}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &8140871334751173293
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355163948559859581}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4606535698428261765
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +267,7 @@ GameObject:
   - component: {fileID: 4606535698697086685}
   - component: {fileID: 4606535698697086686}
   - component: {fileID: 6143754586543076091}
+  - component: {fileID: 5210957706665507352}
   - component: {fileID: 2175692299480660523}
   m_Layer: 0
   m_Name: SoundManager
@@ -161,6 +290,7 @@ Transform:
   m_Children:
   - {fileID: 4606535698428261771}
   - {fileID: 4606535699483481089}
+  - {fileID: 984801631189431675}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -178,14 +308,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSound:
   - name: BGM
-    clip: {fileID: 8300000, guid: 482329dd1f3ef754cb384b0b5a034cde, type: 3}
+    clip: {fileID: 8300000, guid: 2147febd33d63844c9d6d82dcc84aa1a, type: 3}
   sfxSound:
-  - name: Sea_Breeze
-    clip: {fileID: 8300000, guid: ec6bbb1b5344e3b478300c7d8726e223, type: 3}
+  - name: MoveGagal
+    clip: {fileID: 8300000, guid: a9626ff8fdc8f5c4c99f3bcc088b0f2b, type: 3}
   - name: Score
-    clip: {fileID: 8300000, guid: e1a787777e239fb49a43240dc35b9f63, type: 3}
+    clip: {fileID: 8300000, guid: 0a5ba2fce72617240aadd9636431fb63, type: 3}
+  - name: Click
+    clip: {fileID: 8300000, guid: 24b20a488c6f61c42a9d991d2b229ca6, type: 3}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: b4139400919684a4f9e31e4599ef560f, type: 3}
+  - name: SeaSound
+    clip: {fileID: 8300000, guid: 16d2413d26dd97944931ece24289da78, type: 3}
+  - name: OutOfMove
+    clip: {fileID: 8300000, guid: 8cc7b37584f70a44d90360a07d7c8f23, type: 3}
   musicSource: {fileID: 4606535698428261764}
   sfxSource: {fileID: 4606535699483481090}
+  bgSoundSource: {fileID: 8140871334751173293}
 --- !u!114 &6143754586543076091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +351,34 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5210957706665507352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606535698697086687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7706b0fdaacc3cf4abcd5f0f9521aaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2b16e3d3eafbcc84495f3bd9edae7e2a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4606535698697086686}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MoveGagal
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2175692299480660523

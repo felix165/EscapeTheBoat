@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using TMPro;
 
 public class ExitDoor : MonoBehaviour
 {
     public UnityEvent onLevelCompleted;
     public int moveLimit;
-    public Text MovementLimit;
+    public TextMeshProUGUI MovementLimit;
+    bool isOutOfMove = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,12 @@ public class ExitDoor : MonoBehaviour
         }
         if (moveLimit <= 0)
         {
+            isOutOfMove= true;
             GameManager.Instance.OutOfMove();
         }
+    }
+    public bool IsOutOfMove()
+    {
+        return isOutOfMove;
     }
 }
