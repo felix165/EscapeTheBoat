@@ -554,7 +554,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7093561348624643800, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
       propertyPath: moveLimit
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
       propertyPath: m_RootOrder
