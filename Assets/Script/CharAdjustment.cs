@@ -101,7 +101,7 @@ public class CharAdjustment : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.isGamePause) { return; }
+        if (GameManager.isInputEnabled == false) { return; }
         if (moveLimitObj.GetComponent<ExitDoor>().IsOutOfMove()) { return; }
         startPos = this.transform.position;
         if (moveType == Move.Horizontal)
@@ -116,7 +116,7 @@ public class CharAdjustment : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (GameManager.isGamePause) { return; }
+        if (GameManager.isInputEnabled == false) { return; }
         Vector3 mousePos = Input.mousePosition;
 
         if (moveType == Move.Horizontal)
@@ -201,7 +201,7 @@ public class CharAdjustment : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (GameManager.isGamePause) { return; }
+        if (GameManager.isInputEnabled == false) { return; }
         if (moveLimitObj.GetComponent<ExitDoor>().IsOutOfMove()) { onMoveFail?.Invoke(); return; }
         this.gameObject.transform.position = PosAdjustment();
         shadow.transform.position= PosAdjustment();

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private ArrayList loadedScene = new ArrayList();
     private int minLevelScene = 3;
-    private int maxLevelScene = 27;
+    private int maxLevelScene = 32;
     //private int mainMenuScene = 0;
     private int tutorialScene = 1;
     private int gameOverScene = 2;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public static bool isGameOver = false;
     bool isGameStart = false;
     public static bool isGamePause = false;
+
+    public static bool isInputEnabled = true;
 
 
 
@@ -101,6 +103,7 @@ public class GameManager : MonoBehaviour
         loadedScene.Clear();
         isGameOver = false;
         isGameStart = true;
+        isInputEnabled= true;
         if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "GameOver")
         {
             NextLevel();
@@ -128,6 +131,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 loadedScene.Add(sceneIndex);
+                
                 isCountScore = false;
             }          
         }
@@ -161,15 +165,22 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             isCountScore = true;
+            isInputEnabled = false;
             tempScore += completeScore;
             tempScore += (moveLeft * moveBonusScore);
-        }
+            if (loadedScene.Count == (maxLevelScene - minLevelScene) + 1)
+            {
+                tempScore += (int)timeLeft;
+            }
+        }  
     }
+
     public void OutOfMove()
     {
         if (!isGameOver)
         {
             isCountScore = true;
+            isInputEnabled = false;
             tempScore += failScore;
             SoundManager.Instance.PlaySFX("OutOfMove");
             Debug.Log("OutOfMove");
@@ -197,6 +208,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         isGamePause= true;
+        isInputEnabled= false;
         Debug.Log("pause");
         
     }
@@ -204,6 +216,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         isGamePause= false;
+        isInputEnabled = true;
         Debug.Log("Resume");
     }
 
@@ -225,6 +238,19 @@ public class GameManager : MonoBehaviour
         score = tempScore;
         NextLevel();
     }
+    public void reloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public bool isLastLevel()
+    {
+        if(loadedScene.Count >= (minLevelScene - maxLevelScene) + 1)
+        {
+            return true;
+        }
+        return false;
+    }
+
 
 
 
