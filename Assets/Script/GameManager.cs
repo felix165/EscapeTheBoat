@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
     public float timeLimit=600f;
     public static float timeLeft = 600f;
 
+    public static string playerName = "Anonymous";
     public static int score = 0;
     public int completeScore = 200;
     public int moveBonusScore = 10;
@@ -249,6 +252,12 @@ public class GameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void updateName(TMP_InputField text)
+    {
+        playerName = text.text;
+        Debug.Log(playerName);
     }
 
 
