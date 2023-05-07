@@ -429,7 +429,6 @@ GameObject:
   - component: {fileID: 1497650469}
   - component: {fileID: 1497650468}
   - component: {fileID: 1497650467}
-  - component: {fileID: 1497650466}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -457,22 +456,6 @@ RectTransform:
   m_AnchoredPosition: {x: -157, y: 130}
   m_SizeDelta: {x: 250, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1497650466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497650464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e8e72e035b8094bbe79eca67e5d6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onMouseClick:
-    m_PersistentCalls:
-      m_Calls: []
-  TutorialSceneManager: {fileID: 625505981}
 --- !u!114 &1497650467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +574,6 @@ GameObject:
   - component: {fileID: 1525665417}
   - component: {fileID: 1525665416}
   - component: {fileID: 1525665415}
-  - component: {fileID: 1525665414}
   m_Layer: 5
   m_Name: Prev
   m_TagString: Untagged
@@ -619,22 +601,6 @@ RectTransform:
   m_AnchoredPosition: {x: 157.5, y: 130}
   m_SizeDelta: {x: 250, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1525665414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525665412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e8e72e035b8094bbe79eca67e5d6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onMouseClick:
-    m_PersistentCalls:
-      m_Calls: []
-  TutorialSceneManager: {fileID: 625505981}
 --- !u!114 &1525665415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,7 +844,6 @@ GameObject:
   - component: {fileID: 1927164385}
   - component: {fileID: 1927164384}
   - component: {fileID: 1927164383}
-  - component: {fileID: 1927164382}
   m_Layer: 5
   m_Name: Done
   m_TagString: Untagged
@@ -906,22 +871,6 @@ RectTransform:
   m_AnchoredPosition: {x: -131.6, y: -124.8}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1927164382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927164380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e8e72e035b8094bbe79eca67e5d6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onMouseClick:
-    m_PersistentCalls:
-      m_Calls: []
-  TutorialSceneManager: {fileID: 625505981}
 --- !u!114 &1927164383
 MonoBehaviour:
   m_ObjectHideFlags: 0
