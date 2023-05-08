@@ -1,25 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using static GameManager;
 
 public class GameManager : MonoBehaviour
 {
+    [Serializable]
+    public class PlayerData
+    {
+        public string username;
+        public int score;
+        public float timeLeft;
+    }
+
     public static GameManager Instance;
     public float timeLimit=600f;
     public static float timeLeft = 600f;
 
-    public static string playerName = "Anonymous";
+    public static string username = "";
     public static int score = 0;
     public int completeScore = 200;
     public int moveBonusScore = 10;
     public int failScore = 50;
     private int incAmount = 20;
 
-    private int tempScore = 0;
+    //private int playerData.score = 0;
     private float tempDelay = 0;
     private bool isCountScore = false;
 
@@ -36,12 +44,21 @@ public class GameManager : MonoBehaviour
 
     public static bool isInputEnabled = true;
 
+    CloudSave cloudSave;
+    PlayerData playerData = new PlayerData()
+    {
+        username = username,
+        score = 0,
+        timeLeft = 600f, 
+    };
+
+    private int saveCount = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        cloudSave = this.gameObject.GetComponent<CloudSave>();
         //NewGame();
     }
 
@@ -61,15 +78,15 @@ public class GameManager : MonoBehaviour
                 //Score Animation
                 if (isCountScore)
                 {
-                    if (tempScore != score)
+                    if (playerData.score != score)
                     {
                         tempDelay += Time.deltaTime;
                         if (tempDelay >= 0.35f)
                         {
                             tempDelay = 0f;
-                            if (score + incAmount > tempScore)
+                            if (score + incAmount > playerData.score)
                             {
-                                score = tempScore;
+                                score = playerData.score;
                             }
                             else
                             {
@@ -100,18 +117,25 @@ public class GameManager : MonoBehaviour
     //NewGame
     public void NewGame()
     {
-        timeLeft = timeLimit;
-        score = 0;
-        tempScore = score;
-        loadedScene.Clear();
-        isGameOver = false;
-        isGameStart = true;
-        isInputEnabled= true;
-        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "GameOver")
+        if (cloudSave == true)
         {
-            NextLevel();
-        }
-             
+            saveCount++;
+            timeLeft = timeLimit;
+            score = 0;
+            playerData.score = score;
+            loadedScene.Clear();
+            isGameOver = false;
+            isGameStart = true;
+            isInputEnabled = true;
+            playerData.score = 0;
+            playerData.timeLeft = timeLimit;
+            saveData();
+
+            if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "GameOver")
+            {
+                NextLevel();
+            }
+        }    
     }
     
     //NextLevel
@@ -143,7 +167,16 @@ public class GameManager : MonoBehaviour
 
     public void LoadTutorialScene()
     {
-        SceneManager.LoadScene(tutorialScene);
+        signIn();
+        if(cloudSave == true)
+        {
+            SceneManager.LoadScene(tutorialScene);
+        }
+        else
+        {
+            Debug.Log("you haven't sign in yet");
+        }
+        
     }
 
     private int RandomLevel(int min, int max)
@@ -156,7 +189,7 @@ public class GameManager : MonoBehaviour
         bool flag = true;
         while(flag)
         {
-            sceneIndex = (int)Random.Range(min, max+1);
+            sceneIndex = (int)UnityEngine.Random.Range(min, max+1);
             flag=loadedScene.Contains(sceneIndex);
         }
         return sceneIndex;
@@ -169,12 +202,13 @@ public class GameManager : MonoBehaviour
         {
             isCountScore = true;
             isInputEnabled = false;
-            tempScore += completeScore;
-            tempScore += (moveLeft * moveBonusScore);
+            playerData.score += completeScore;
+            playerData.score += (moveLeft * moveBonusScore);
             if (loadedScene.Count == (maxLevelScene - minLevelScene) + 1)
             {
-                tempScore += (int)timeLeft;
+                playerData.score += (int)timeLeft;
             }
+            saveData();
         }  
     }
 
@@ -184,13 +218,15 @@ public class GameManager : MonoBehaviour
         {
             isCountScore = true;
             isInputEnabled = false;
-            tempScore += failScore;
+            playerData.score += failScore;
             SoundManager.Instance.PlaySFX("OutOfMove");
             Debug.Log("OutOfMove");
+            saveData();
         }
     }
     public void QuitGame()
     {
+        cloudSave.OnClickSignOut();
         Application.Quit();
     }
     void Awake()
@@ -238,7 +274,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
-        score = tempScore;
+        score = playerData.score;
         NextLevel();
     }
     public void reloadScene()
@@ -247,7 +283,7 @@ public class GameManager : MonoBehaviour
     }
     public bool isLastLevel()
     {
-        if(loadedScene.Count >= (minLevelScene - maxLevelScene) + 1)
+        if(loadedScene.Count >= (maxLevelScene - minLevelScene) + 1)
         {
             return true;
         }
@@ -256,8 +292,27 @@ public class GameManager : MonoBehaviour
 
     public void updateName(TMP_InputField text)
     {
-        playerName = text.text;
-        Debug.Log(playerName);
+        if(cloudSave == null)
+        {
+            cloudSave = this.gameObject.GetComponent<CloudSave>();
+        }
+        username = text.text;
+        cloudSave.OnClickSwitchProfile();
+    }
+
+    public void signIn()
+    {
+        if (cloudSave == null)
+        {
+            cloudSave = this.gameObject.GetComponent<CloudSave>();
+        }
+        cloudSave.OnClickSignIn();
+    }
+    public async void saveData()
+    {
+        playerData.timeLeft = timeLeft;
+        playerData.username = username;
+        await cloudSave.ForceSaveObjectData($"Save_{saveCount}", playerData);
     }
 
 

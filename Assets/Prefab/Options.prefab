@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1962135363957268116}
   - component: {fileID: 401927483315107282}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFXSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,6 +598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8418358690457486787}
+  - component: {fileID: 9102401509170055625}
   m_Layer: 0
   m_Name: Options
   m_TagString: Untagged
@@ -621,6 +622,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9102401509170055625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109278748401303573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d703403ff11414e8d982aaa09e0618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 7316092677116108567}
+  sfx: {fileID: 401927483315107282}
 --- !u!1 &3449677839687462879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1447,7 @@ GameObject:
   - component: {fileID: 3917275455648151995}
   - component: {fileID: 7316092677116108567}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SoundSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1834,7 +1849,6 @@ GameObject:
   - component: {fileID: 5685447951849680752}
   - component: {fileID: 3776792993522035854}
   - component: {fileID: 6460674189739826136}
-  - component: {fileID: 8214846737187101063}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1904,17 +1918,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8214846737187101063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8677129279033697199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d703403ff11414e8d982aaa09e0618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgm: {fileID: 7316092677116108567}
-  sfx: {fileID: 401927483315107282}
