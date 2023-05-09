@@ -30,6 +30,7 @@ public class CharAdjustment : MonoBehaviour
     private Vector3 tempStartPos;
     public float speed = 1.2f;
 
+    [HideInInspector]
     public GameObject moveLimitObj;
     /*public UnityEvent onMoveSuccess;*/
     public UnityEvent onMoveFail;
@@ -56,7 +57,7 @@ public class CharAdjustment : MonoBehaviour
         //transparentColor
         Color color = spriteRenderer.material.GetColor("_Color");
         transparentColor = new Color(color.r, color.g, color.b, 0.45f);
-
+        moveLimitObj = FindObjectOfType<ExitDoor>().gameObject;
         imageAdjustment();
         colliderAdjustment();
         this.gameObject.transform.position = PosAdjustment();

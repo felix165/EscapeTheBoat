@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: sprite
       value: 
@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 2078538398929511434, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: m_Name
       value: LargeVertikal (1)
@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -214,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -315,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (2)
@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -392,7 +392,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (5)
@@ -456,6 +456,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab169e364e5bcae4e88578fcde384f28, type: 3}
+--- !u!1 &277942704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5503280712633213573, guid: ab169e364e5bcae4e88578fcde384f28, type: 3}
+  m_PrefabInstance: {fileID: 277942703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!156049354 &277942705 stripped
+Grid:
+  m_CorrespondingSourceObject: {fileID: 7230757321878983035, guid: ab169e364e5bcae4e88578fcde384f28, type: 3}
+  m_PrefabInstance: {fileID: 277942703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &529101967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -510,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -518,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (1)
@@ -579,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -587,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal
@@ -708,11 +718,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5ea232e540be24db6a5436d6ca6797, type: 3}
---- !u!1 &715824516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 901105240548388614, guid: ab169e364e5bcae4e88578fcde384f28, type: 3}
-  m_PrefabInstance: {fileID: 277942703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &920680293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: sprite
       value: 
@@ -775,7 +780,7 @@ PrefabInstance:
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 638134566806848306, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -836,7 +841,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -844,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (3)
@@ -865,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -873,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -920,11 +925,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
---- !u!156049354 &1260268452 stripped
-Grid:
-  m_CorrespondingSourceObject: {fileID: 5325178829096624325, guid: ab169e364e5bcae4e88578fcde384f28, type: 3}
-  m_PrefabInstance: {fileID: 277942703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1439754195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: sprite
       value: 
@@ -943,7 +943,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 2078538398929511434, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: m_Name
       value: LargeVertikal
@@ -1048,7 +1048,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (4)
@@ -1077,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1260268452}
+      objectReference: {fileID: 277942705}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -1085,7 +1085,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 715824516}
+      objectReference: {fileID: 277942704}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 4
