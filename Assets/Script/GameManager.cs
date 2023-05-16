@@ -70,8 +70,10 @@ public class GameManager : MonoBehaviour
             if (timeLeft <= 0)
             {
                 //GameOver
-                GameOver();
-
+                if (!isGameOver)
+                {
+                    GameOver();
+                }
             }
             else
             {
