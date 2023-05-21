@@ -99,7 +99,9 @@ public class CharAdjustment : MonoBehaviour
             collider.size = new Vector2(collider.size.y, collider.size.x);
         }
     }
-
+    /// <summary>
+    /// ubah
+    /// </summary>
     private void OnMouseDown()
     {
         if (GameManager.isInputEnabled == false) { return; }
@@ -194,7 +196,6 @@ public class CharAdjustment : MonoBehaviour
                 }
             }
         }
-
         Vector3 goalPos = grid.CellToWorld(gridPosition) / 108;
         //Debug.Log(this.gameObject.transform.position + "xxx" + goalPos + "xxx" + gridPosition);
         return goalPos;

@@ -119,9 +119,15 @@ public class GameManager : MonoBehaviour
     //NewGame
     public void NewGame()
     {
+        if(cloudSave!= true)
+        {
+            cloudSave = this.gameObject.GetComponent<CloudSave>();
+        }
+
         if (cloudSave == true)
         {
             saveCount++;
+            Debug.Log(timeLimit);
             timeLeft = timeLimit;
             score = 0;
             playerData.score = score;
@@ -137,7 +143,7 @@ public class GameManager : MonoBehaviour
             {
                 NextLevel();
             }
-        }    
+        }  
     }
     
     //NextLevel

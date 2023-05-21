@@ -248,7 +248,7 @@ MonoBehaviour:
   moveType: 0
   charType: 1
   grid: {fileID: 0}
-  speed: 7
+  speed: 9
   moveLimitObj: {fileID: 0}
   onMoveFail:
     m_PersistentCalls:
