@@ -137,7 +137,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -269,6 +269,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef86627aa01168a449874b8161466442, type: 3}
+--- !u!1001 &335133688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1575750744248596934, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: moveLimit
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673358, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119102121959673359, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+      propertyPath: m_Name
+      value: Board3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
 --- !u!1001 &449938837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -291,7 +352,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -338,6 +399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
+--- !u!156049354 &508339827 stripped
+Grid:
+  m_CorrespondingSourceObject: {fileID: 773525697033547668, guid: 63511251b9f686d48947270f8fb72c11, type: 3}
+  m_PrefabInstance: {fileID: 335133688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &750420830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -360,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -417,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: sprite
       value: 
@@ -425,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 2078538398929511434, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: m_Name
       value: LargeVertikal
@@ -530,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: sprite
       value: 
@@ -538,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7603600486613390923, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: m_Name
       value: LargeHorizontal (1)
@@ -599,7 +665,7 @@ PrefabInstance:
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: sprite
       value: 
@@ -607,7 +673,7 @@ PrefabInstance:
     - target: {fileID: 7603600486613390916, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7603600486613390923, guid: e1fd9d33640277d459383292a9bf5d2b, type: 3}
       propertyPath: m_Name
       value: LargeHorizontal
@@ -668,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -676,7 +742,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal
@@ -693,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: sprite
       value: 
@@ -701,7 +767,7 @@ PrefabInstance:
     - target: {fileID: 2078538398929511429, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 2078538398929511434, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
       propertyPath: m_Name
       value: LargeVertikal (1)
@@ -752,77 +818,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08a98656159f7bf48a77e12f2a186094, type: 3}
---- !u!1001 &1331741685
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7093561348624643800, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: moveLimit
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805904, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694334703924805905, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-      propertyPath: m_Name
-      value: Board
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
---- !u!1 &1331741686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6130545714574316404, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-  m_PrefabInstance: {fileID: 1331741685}
-  m_PrefabAsset: {fileID: 0}
---- !u!156049354 &1331741687 stripped
-Grid:
-  m_CorrespondingSourceObject: {fileID: 9012627575592902794, guid: 4aac0cb894b41fe4493b3bc696310526, type: 3}
-  m_PrefabInstance: {fileID: 1331741685}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485030308
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 638134566806848305, guid: 820cdf142fa40b04fa1e23c4f026c0bb, type: 3}
       propertyPath: sprite
       value: 
@@ -1030,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: sprite
       value: 
@@ -1038,7 +1033,7 @@ PrefabInstance:
     - target: {fileID: 981212597400963673, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 981212597400963674, guid: 4b52529573cb4b34a8bd442f8f352683, type: 3}
       propertyPath: m_Name
       value: SmallHorizontal (1)
@@ -1059,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 1331741687}
+      objectReference: {fileID: 508339827}
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: sprite
       value: 
@@ -1067,7 +1062,7 @@ PrefabInstance:
     - target: {fileID: 7391302672271206314, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: moveLimitObj
       value: 
-      objectReference: {fileID: 1331741686}
+      objectReference: {fileID: 0}
     - target: {fileID: 7391302672271206324, guid: d67d29d8b199bc84d9d45c60d10551c2, type: 3}
       propertyPath: m_RootOrder
       value: 9
