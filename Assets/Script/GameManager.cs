@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         cloudSave = this.gameObject.GetComponent<CloudSave>();
         //NewGame();
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
+                        isInputEnabled = true;
                         NextLevel();
                     }
                 }
@@ -116,6 +118,12 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        throw new NotImplementedException();
+    }
+
     //NewGame
     public void NewGame()
     {
