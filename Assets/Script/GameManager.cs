@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using static GameManager;
 
 public class GameManager : MonoBehaviour
@@ -242,8 +243,16 @@ public class GameManager : MonoBehaviour
     }
     public void QuitGame()
     {
-        cloudSave.OnClickSignOut();
-        Application.Quit();
+        if (cloudSave != true)
+        {
+            cloudSave = this.gameObject.GetComponent<CloudSave>();
+        }
+        if (cloudSave == true)
+        {
+            cloudSave.OnClickSignOut();
+            Application.Quit();
+        }
+        
     }
     void Awake()
     {
@@ -295,7 +304,11 @@ public class GameManager : MonoBehaviour
     }
     public void reloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if(isInputEnabled && !isCountScore)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        
     }
     public bool isLastLevel()
     {
