@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         timeLeft = 600f, 
     };
 
-    private int saveCount = 0;
+    private string saveID = "";
 
 
     // Start is called before the first frame update
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
 
         if (cloudSave == true)
         {
-            saveCount++;
+            generateUniqueID();
             Debug.Log(timeLimit);
             timeLeft = timeLimit;
             score = 0;
@@ -341,9 +341,13 @@ public class GameManager : MonoBehaviour
     {
         playerData.timeLeft = timeLeft;
         playerData.username = username;
-        await cloudSave.ForceSaveObjectData($"Save_{saveCount}", playerData);
+        await cloudSave.ForceSaveObjectData($"Save_{saveID}", playerData);
     }
-
+    public void generateUniqueID()
+    {
+        string newBackstageItemID = System.Guid.NewGuid().ToString();
+        saveID = newBackstageItemID;
+    }
 
 
 
